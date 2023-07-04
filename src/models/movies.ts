@@ -1,5 +1,6 @@
-export type Movies = {
-    name: string;
-    image: string;
-    actorName: string;
-}
+export type Movie = {
+  id: number;
+  name: string;
+  image: string;
+  year: string;
+};

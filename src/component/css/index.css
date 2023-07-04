@@ -1,0 +1,22 @@
+.movie-card {
+  width: 20%;
+}
+.movie-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+.movie-card span {
+  display: block;
+  color: white;
+}
+.movie-card__title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-card__year {
+  font-size: 14px;
+  opacity: 0.5;
+}/*# sourceMappingURL=index.css.map */

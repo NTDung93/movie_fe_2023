@@ -1,0 +1,34 @@
+.movie-card {
+  width: calc(20% - 25px);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 100%;
+    // height: 20rem;
+    border-radius: 12px;
+    margin-bottom: 0.7rem;
+  }
+
+  span {
+    display: block;
+    color: white;
+  }
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 0.2rem;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__year {
+    font-size: 14px;
+    opacity: 0.5;
+  }
+}

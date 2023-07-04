@@ -1,4 +1,15 @@
 .home {
   background-color: rgb(10, 31, 59);
   min-height: 100vh;
+
+  .list-movie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .list-movie {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
 }
