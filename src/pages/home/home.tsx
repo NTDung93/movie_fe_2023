@@ -4,6 +4,7 @@ import Background from '../../component/background';
 import axios from 'axios';
 import { Movie } from '../../models/movies';
 import MovieCard from '../../component/movie-card';
+import api from '../../config/axios';
 
 const Home: FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -14,8 +15,9 @@ const Home: FC = () => {
       .then((response) => {
         const myMovie = mapToMyMovies(response.data.results);
 
-        axios
-          .post('http://localhost:8080/movies', myMovie)
+        api //this api here is the api in axios.ts file (ctrl + click to this api to see detailed)
+          // .post('http://localhost:8080/movies', myMovie) //for local
+          .post('/movies', myMovie) //for nginx server
           .then(response => {
             console.log(response);
           })
@@ -36,8 +38,9 @@ const Home: FC = () => {
 
   //fetch api get all movies in db
   useEffect(() => {
-    axios
-      .get(`http://localhost:8080/movie`)
+    api
+      // .get(`http://localhost:8080/movie`)
+      .get(`/movie`)
       .then((response) => {
         setMovies(response.data)
       })
@@ -48,7 +51,7 @@ const Home: FC = () => {
     <div className='home'>
       <Background />
 
-      {/* <button onClick={importAuto}>Import Auto</button> */}
+      <button onClick={importAuto}>Import Auto</button>
 
       <div className="list-movie-container">
         <div className="list-movie">
